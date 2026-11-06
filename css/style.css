@@ -1,0 +1,660 @@
+/* ==========================================================================
+   BAO BROTHERS — Official Website Stylesheet
+   Precision typography and responsive layout matching BAO_onepager.pdf
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Chunk SK';
+  src: url('../assets/fonts/Chunk_SK_final.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Condensed';
+  src: url('../assets/fonts/DIN-Condensed-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --font-chunk: 'Chunk SK', Impact, sans-serif;
+  --font-din: 'DIN Condensed', 'Arial Narrow', sans-serif;
+  --site-width: 1008px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-black);
+  color: var(--color-black);
+  font-family: var(--font-din);
+  line-height: 1;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   HEADER SECTION (Total height: 94px)
+   ========================================================================== */
+.site-header {
+  width: 100%;
+  height: 94px;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.brand-logo-link {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 374px;
+  height: 36px;
+  display: block;
+}
+
+.header-divider {
+  position: absolute;
+  top: 92px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-black);
+}
+
+/* ==========================================================================
+   TOP LIGHT SECTION (Starts y=94, height: 1426px, ends y=1520)
+   ========================================================================== */
+.section-light {
+  width: 100%;
+  height: 1426px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  position: relative;
+}
+
+.section-light .container {
+  width: var(--site-width);
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Hero Title: IT'S ALWAYS / BAO TIME (y: 174..365 -> rel top: 80px) */
+.hero-headline {
+  position: absolute;
+  top: 83px;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-chunk);
+  font-size: 120.3px;
+  line-height: 104px;
+  letter-spacing: 0.033em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.hero-headline .sub-s {
+  text-transform: lowercase;
+}
+
+/* Subtitle: VYBER SI KDE SA DNES / STRETNEME? (y: 414..501 -> rel top: 320px) */
+.hero-subheadline {
+  position: absolute;
+  top: 320px;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-din);
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black);
+}
+
+/* ==========================================================================
+   4 SERVICES IN LIGHT SECTION (Absolute on desktop)
+   ========================================================================== */
+/* 1. STREETFOOD (Col 1, Row 1) */
+.card-streetfood .illustration-link {
+  position: absolute;
+  top: 457px; /* y = 556 */
+  left: 69px;
+  width: 440px;
+  height: 275px;
+  display: block;
+  text-decoration: none;
+}
+.card-streetfood .img-streetfood {
+  width: 440px;
+  height: 275px;
+  display: block;
+}
+.card-streetfood .service-title {
+  position: absolute;
+  top: 780px; /* y = 865 */
+  left: 114px;
+  width: 337px;
+  font-family: var(--font-din);
+  font-size: 53px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black);
+}
+.card-streetfood .btn-streetfood {
+  position: absolute;
+  top: 823px; /* y = 917 */
+  left: 200px;
+  width: 180px;
+  height: 57px;
+}
+
+/* 2. CATERING (Col 2, Row 1) */
+.card-catering .illustration-link {
+  position: absolute;
+  top: 477px; /* y = 572 */
+  left: 499px;
+  width: 386px;
+  height: 269px;
+  display: block;
+  text-decoration: none;
+}
+.card-catering .img-catering {
+  width: 386px;
+  height: 269px;
+  display: block;
+}
+.card-catering .service-title {
+  position: absolute;
+  top: 780px; /* y = 865 */
+  left: 554px;
+  width: 337px;
+  font-family: var(--font-din);
+  font-size: 53px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black);
+}
+.card-catering .btn-catering {
+  position: absolute;
+  top: 823px; /* y = 917 */
+  left: 658px;
+  width: 130px;
+  height: 57px;
+}
+
+/* 3. REŠTAURÁCIA (Col 1, Row 2) */
+.card-restauracia .illustration-link {
+  position: absolute;
+  top: 915px; /* y = 1012 */
+  left: 102px;
+  width: 375px;
+  height: 295px;
+  display: block;
+  text-decoration: none;
+}
+.card-restauracia .img-restauracia {
+  width: 375px;
+  height: 295px;
+  display: block;
+}
+.card-restauracia .service-title {
+  position: absolute;
+  top: 1237px; /* y = 1323 */
+  left: 114px;
+  width: 365px;
+  font-family: var(--font-din);
+  font-size: 53px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black);
+}
+.card-restauracia .btn-restauracia {
+  position: absolute;
+  top: 1294px; /* y = 1388 */
+  left: 235px;
+  width: 120px;
+  height: 57px;
+}
+
+/* 4. DONÁŠKA (Col 2, Row 2) */
+.card-donaska .illustration-link {
+  position: absolute;
+  top: 905px; /* y = 1000 */
+  left: 525px;
+  width: 372px;
+  height: 317px;
+  display: block;
+  text-decoration: none;
+}
+.card-donaska .img-donaska {
+  width: 372px;
+  height: 317px;
+  display: block;
+}
+.card-donaska .service-title {
+  position: absolute;
+  top: 1236px; /* y = 1322 */
+  left: 535px;
+  width: 363px;
+  font-family: var(--font-din);
+  font-size: 53px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black);
+}
+.card-donaska .btn-donaska {
+  position: absolute;
+  top: 1295px; /* y = 1389 */
+  left: 662px;
+  width: 120px;
+  height: 57px;
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+.bao-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2.5px solid var(--color-black);
+  background-color: transparent;
+  color: var(--color-black);
+  text-decoration: none;
+  font-family: var(--font-din);
+  font-size: 25.86px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.bao-btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transform: scale(1.04);
+}
+
+.illustration-link {
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.illustration-link:hover {
+  transform: scale(1.02);
+  opacity: 0.92;
+}
+
+/* ==========================================================================
+   DARK SECTION (Starts y=1520, height: 1256px, ends y=2776)
+   ========================================================================== */
+.section-dark {
+  width: 100%;
+  height: 1256px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  position: relative;
+}
+
+.section-dark .container {
+  width: var(--site-width);
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Dark Section Headline: IT'S BAO TIME NOW! (rendered in Chunk SK font) */
+.dark-headline {
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  width: 610px;
+  height: 830px;
+  overflow: hidden;
+  font-family: var(--font-chunk);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.dark-headline .dark-line {
+  position: absolute;
+  line-height: 0.8;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.dark-headline .dark-line-1 {
+  top: 18px;
+  left: 13.5px;
+  font-size: 334px;
+}
+
+.dark-headline .dark-line-2 {
+  top: 263.5px;
+  left: 11.5px;
+  font-size: 301px;
+}
+
+.dark-headline .dark-line-3 {
+  top: 488px;
+  left: 13px;
+  font-size: 245.5px;
+}
+
+.dark-headline .dark-line-4 {
+  top: 675.5px;
+  left: 11px;
+  font-size: 228.5px;
+}
+
+/* Announcement: UŽ 1. DECEMBRA... (y: 2482..2570 -> rel top: 962px) */
+.announcement-text {
+  position: absolute;
+  top: 970px;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-din);
+  font-size: 44.5px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0.022em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+}
+
+/* Dark action button (y: 2626..2694 -> rel top: 1106px) */
+.dark-btn-wrapper {
+  position: absolute;
+  top: 1106px;
+  left: 422px;
+  width: 164px;
+  height: 68px;
+}
+
+.bao-btn-white {
+  width: 164px;
+  height: 68px;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.bao-btn-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* ==========================================================================
+   FOOTER (Starts y=2776, height: 71px, ends y=2847)
+   ========================================================================== */
+.footer-divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+}
+
+.site-footer {
+  width: 100%;
+  height: 69px;
+  background-color: var(--color-black);
+  position: relative;
+  text-align: center;
+}
+
+.copyright-text {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-din);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS & MOBILE)
+   When width < 1008px, seamlessly switch to flex/grid flow
+   ========================================================================== */
+@media (max-width: 1007px) {
+  .site-header, .section-light, .section-dark, .site-footer {
+    height: auto;
+  }
+  .section-light .container, .section-dark .container {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 0 20px;
+  }
+  .brand-logo-link, .header-divider, .hero-headline, .hero-subheadline,
+  .dark-headline, .announcement-text, .dark-btn-wrapper, .copyright-text,
+  .card-streetfood .illustration-link, .card-streetfood .service-title, .card-streetfood .btn-streetfood,
+  .card-catering .illustration-link, .card-catering .service-title, .card-catering .btn-catering,
+  .card-restauracia .illustration-link, .card-restauracia .service-title, .card-restauracia .btn-restauracia,
+  .card-donaska .illustration-link, .card-donaska .service-title, .card-donaska .btn-donaska {
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 0 auto;
+  }
+  .site-header {
+    padding: 30px 16px 0 16px;
+  }
+  .brand-logo {
+    width: 320px;
+    height: auto;
+  }
+  .header-divider {
+    margin-top: 18px;
+    position: static;
+  }
+  .section-light {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .hero-headline {
+    font-size: clamp(38px, 9.8vw, 84px);
+    line-height: 0.92;
+    margin-bottom: 30px;
+    white-space: normal;
+  }
+  .hero-subheadline {
+    font-size: clamp(24px, 5.2vw, 42px);
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 36px 24px;
+    max-width: 800px;
+  }
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .illustration-link {
+    height: auto !important;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0 !important;
+  }
+  .img-streetfood,
+  .img-catering,
+  .img-restauracia,
+  .img-donaska {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
+  .service-title {
+    margin-top: 16px !important;
+    margin-bottom: 14px !important;
+    font-size: clamp(34px, 4.8vw, 46px) !important;
+    line-height: 1 !important;
+  }
+  .bao-btn {
+    min-width: 140px;
+    height: 52px !important;
+    padding: 0 24px;
+    border-radius: 9999px;
+  }
+  .btn-streetfood {
+    min-width: 170px;
+  }
+  .section-dark {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .dark-headline {
+    position: static;
+    width: 100%;
+    max-width: 585px;
+    height: auto;
+    overflow: visible;
+    margin: 0 auto 36px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .dark-headline .dark-line {
+    position: static;
+    display: block;
+    line-height: 0.82;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .dark-headline .dark-line-1 { font-size: clamp(80px, 41vw, 240px); }
+  .dark-headline .dark-line-2 { font-size: clamp(72px, 37.5vw, 218px); }
+  .dark-headline .dark-line-3 { font-size: clamp(59px, 30.75vw, 178px); }
+  .dark-headline .dark-line-4 { font-size: clamp(55px, 28.5vw, 165px); }
+  .announcement-text {
+    font-size: clamp(22px, 4.6vw, 36px) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 36px !important;
+    padding: 0 16px;
+    max-width: 650px;
+  }
+  .dark-btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .bao-btn-white {
+    min-width: 160px;
+    height: 60px !important;
+  }
+  .footer-divider {
+    position: static;
+  }
+  .site-footer {
+    height: auto;
+    padding: 24px 16px;
+  }
+  .copyright-text {
+    position: static;
+    font-size: clamp(15px, 2.8vw, 20px);
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    padding-top: 24px;
+  }
+  .brand-logo {
+    width: 240px;
+    max-width: 80vw;
+  }
+  .hero-headline {
+    font-size: clamp(28px, 8.5vw, 44px);
+    margin-bottom: 20px;
+  }
+  .hero-subheadline {
+    font-size: clamp(17px, 5.2vw, 24px);
+    line-height: 1.15;
+    margin-bottom: 28px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+    max-width: 300px;
+  }
+  .service-illustration {
+    max-width: 240px !important;
+  }
+  .service-title {
+    font-size: 32px !important;
+  }
+  .section-dark {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .dark-headline {
+    margin-bottom: 28px;
+    padding: 0 10px;
+  }
+  .dark-headline .dark-line-1 { font-size: clamp(38px, 38vw, 115px); }
+  .dark-headline .dark-line-2 { font-size: clamp(34px, 34.5vw, 104px); }
+  .dark-headline .dark-line-3 { font-size: clamp(28px, 28.5vw, 86px); }
+  .dark-headline .dark-line-4 { font-size: clamp(26px, 26.2vw, 79px); }
+  .announcement-text {
+    font-size: clamp(16px, 4.8vw, 22px) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 28px !important;
+  }
+  .bao-btn-white {
+    min-width: 140px;
+    height: 52px !important;
+  }
+  .copyright-text {
+    font-size: 14px;
+  }
+}
